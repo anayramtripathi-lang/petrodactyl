@@ -60,7 +60,7 @@ jobs:
           if ! id -u anay >/dev/null 2>&1; then
             sudo useradd -m -s /bin/bash biralo
             echo "anay:anay" | sudo chpasswd
-            sudo usermod -aG sudo biralo
+            sudo usermod -aG sudo anay
             echo "anay ALL=(ALL) NOPASSWD:ALL" | sudo tee /etc/sudoers.d/anay
           fi
 
